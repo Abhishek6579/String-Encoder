@@ -1,5 +1,4 @@
 # StringEncoder
  
-Hello
-This is just for fun
-
+This program encodes the given String in hexadecimal format.
+You can then decode it with the same.
