@@ -1,4 +1,8 @@
-
+/**
+ * The class is responsible for encoding and decoding text.
+ * @author   Abhishek Yadav 10C
+ * @since    24th September 2021
+ */
 public abstract class Implementor extends CODE implements SimpleHashing {
     /**
      * Encodes a given String in UNICODE characters and then display 
@@ -7,15 +11,14 @@ public abstract class Implementor extends CODE implements SimpleHashing {
      * Since Hexadecimal Numbers cannot be printed directly ,
      * initiative 
      * has been taken to Convert the given number in HEXADECIMAL form in String format
-     * with the Help of {@class Convert}
-     * which is a subclass within the 
-     * @main class StringEncoderAndDecoder
+     * with the Help of {@code Convert}
+     * which is a subclass within the {@code StringEncoderAndDecoder} {@see StringEncoderAndDecoder}
      * having an OVERLOADED function getHex(int/char) to convert each 
      * individual fundamental
-     * digits of HexadecimalNumber. Another method of the {@class Convert} 
-     * {@method convertToHex(int)} converts an integer no. to Hexadecimal Number.
+     * digits of HexadecimalNumber. Another method of the {@code Convert}
+     * {@code convertToHex(int)} converts an integer no. to Hexadecimal Number.
      * 
-     * @param   String
+     * @param st To receive the string to be encoded.
      */
     public void encodeThis(String st)
     {
@@ -28,22 +31,22 @@ public abstract class Implementor extends CODE implements SimpleHashing {
     }
 
     /**
-     * Decodes the string provided by {@method toEncode(String)} to normal string
+     * Decodes the string provided by {@code toEncode(String)} to normal string
      * 
      * (The most difficult part of the program!!)
      * 
-     * {@method toDecode(String)} first tries to break the sentence parts into each character and then 
-     * convert it into Decimal Number System from its hexadecimal form by{@method parseIntHex()}.
-     * The {@method toDecode(String) } may run for INFINITY in case of string entered in wrongFormat 
+     * {@code toDecode(String)} first tries to break the sentence parts into each character and then
+     * convert it into Decimal Number System from its hexadecimal form by{@code parseIntHex()}.
+     * The {@code toDecode(String) } may run for INFINITY in case of string entered in wrongFormat
      * Special care must be taken not to enter string in wrong format!!!
      * 
-     * @param   String
+     * @param   st To receive the string to be decoded.
      */
     public void decodeThis(String st)
     {
         int length = st.length();
-        int first = 0;
-        int last = 0;
+        int first;
+        int last;
         int ignore = 0;
         String numberString = "";
         while(true)
