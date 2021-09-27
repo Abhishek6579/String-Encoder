@@ -1,6 +1,16 @@
 import java.util.Scanner;
+/**
+ * The class from which the execution must start.
+ * @author   Abhishek Yadav 10C
+ * @since    24th September 2021
+ */
 public class Start
 {
+    /**
+     * The main method.
+     * Execution starts here.
+     * @param args To receive the command line arguments.
+     */
     public static void main(String[] args)
     {
         Scanner scn = new Scanner(System.in);
@@ -10,23 +20,21 @@ public class Start
         int choice = scn.nextInt();
         scn.nextLine();
         String st;
-        switch(choice)
-        {
-            case 1 :
-            System.out.println("Enter a String ");
-            st = scn.nextLine();
-            EncoderAndDecoder.OK.encodeThis(st);
-            break;
-
-            case 2:
-            System.out.println("Enter a String ");
-            st = scn.nextLine();
-            EncoderAndDecoder.OK.decodeThis(st);
-            break;
-
-            default :
-            System.out.println("Invalid choice!!!");
-            scn.close();
+        switch (choice) {
+            case 1 -> {
+                System.out.println("Enter a String ");
+                st = scn.nextLine();
+                EncoderAndDecoder.OK.encodeThis(st);
+            }
+            case 2 -> {
+                System.out.println("Enter a String ");
+                st = scn.nextLine();
+                EncoderAndDecoder.OK.decodeThis(st);
+            }
+            default -> {
+                System.out.println("Invalid choice!!!");
+                scn.close();
+            }
         }
 
     }
